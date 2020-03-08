@@ -1,0 +1,24 @@
+
+<p>
+  Start editing to see some magic happen :)
+</p>
+<div style="width: 100%; height: 1000px; padding: 100px">
+  <div style="width: 100%; height: 1000px">
+    <gridster [options]="gridOptions.opts">
+      <gridster-item [item]="item" *ngFor="let item of dashboard">
+        <div class="full-width-height" style="width: 100%; height: 100%">
+          <ngx-charts-pie-chart
+            [scheme]="colorScheme"
+            [results]="data"
+            [legend]="false"
+            [animations]="true"
+            [labels] = "true"
+            [view]=item.view
+            [maxLabelLength]="40"
+            >
+          </ngx-charts-pie-chart>
+        </div>
+      </gridster-item>
+    </gridster>
+  </div>
+</div>
